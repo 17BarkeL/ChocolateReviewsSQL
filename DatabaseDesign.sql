@@ -1,0 +1,23 @@
+﻿CREATE TABLE ChocolateBars
+(
+	[ChocolateBarID] INT NOT NULL PRIMARY KEY, 
+    [Name] NCHAR(256) NOT NULL, 
+    [Price] MONEY NOT NULL
+)
+
+CREATE TABLE Reviews
+(
+	[Reviews] INT NOT NULL PRIMARY KEY,
+	[ReviewID] INT NOT NULL,
+	[ChocolateBarID] INT NOT NULL,
+	[UserID] INT NOT NULL,
+	[Score] INT NOT NULL,
+	[Comment] TEXT NOT NULL DEFAULT 'No Comment Added'
+)
+
+CREATE TABLE Users
+(
+	[UserID] INT NOT NULL PRIMARY KEY,
+	[FirstName] NCHAR(256) NOT NULL DEFAULT '',
+	[LastName] NCHAR(256) NOT NULL DEFAULT ''
+)
